@@ -43,7 +43,7 @@ ui <- bootstrapPage(
   
   absolutePanel(top = 100, left = 10, draggable = TRUE, width = "20%", style = "z-index:500; min-width: 300px;",
                 textInput("geocode", "Type an address or location", placeholder = "in England, Wales or NI"),
-                checkboxInput("use_location", "Or use your curret location?"),
+                checkboxInput("use_location", "Or use your current location?"),
                 actionButton("go", "Find Crime!", class = "btn-primary"),
                 highchartOutput("selectstat")
   )
