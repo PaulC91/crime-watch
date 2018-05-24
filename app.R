@@ -9,6 +9,8 @@ Sys.setenv(OPENCAGE_KEY = readRDS("opencage_api.rds"))
 
 ui <- bootstrapPage(
   
+  title = "Crime Watch",
+  
   tags$head(
     tags$link(href = "https://fonts.googleapis.com/css?family=Oswald", rel = "stylesheet"),
     tags$style(type = "text/css", "html, body {width:100%;height:100%; font-family: Oswald, sans-serif;}"),
@@ -114,7 +116,7 @@ server <- function(input, output, session) {
                    
                    incProgress(1/5)
                    
-                   tryCatch({
+                   #tryCatch({
                      pal <- c("#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02")
                      leafPal <- colorFactor(pal, levels = c(crime_rank$category[1:5], "hover for detail"))
                      #nord::nord("aurora", 6, reverse = TRUE)
@@ -143,13 +145,13 @@ server <- function(input, output, session) {
                        
                      })
                    
-                   },
-                   error = function(e) {
-                     showModal(modalDialog(title = "Sorry!", 
-                                           tags$p("We couldn't find any data for that location."),
-                                           tags$p("Give another one a try!")))
-                   }
-                   )
+                   #},
+                   #error = function(e) {
+                  #   showModal(modalDialog(title = "Sorry!", 
+                  #                         tags$p("We couldn't find any data for that location."),
+                  #                         tags$p("Give another one a try!")))
+                  # }
+                  # )
                    
                    incProgress(1/5)
                    
