@@ -68,7 +68,11 @@ server <- function(input, output, session) {
                    if (input$use_location) {
                      
                      validate(
-                       need(input$geolocation, message = "Sorry we couldn't get your location. Try typing it instead...")
+                       need(input$geolocation, {
+                         showModal(modalDialog(title = "Sorry!", 
+                                               tags$p("We couldn't find your location"),
+                                               tags$p("Try typing one in instead...")))
+                       })
                      )
                      
                      lat <- input$lat
@@ -80,7 +84,10 @@ server <- function(input, output, session) {
                    } else {
                      
                      validate(
-                       need(nchar(input$geocode > 2), message = "Please type a place name first!")
+                       need(nchar(input$geocode > 2), {
+                         showModal(modalDialog(title = "Error!", 
+                                               tags$p("Please type a place name first!")))
+                       })
                      )
                      
                      geoc <- opencage_forward(placename = input$geocode, countrycode = "GB")
