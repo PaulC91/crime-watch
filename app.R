@@ -9,11 +9,10 @@ Sys.setenv(OPENCAGE_KEY = readRDS("opencage_api.rds"))
 
 ui <- bootstrapPage(
   
-  title = "Crime Watch",
-  
   tags$head(
     tags$link(href = "https://fonts.googleapis.com/css?family=Oswald", rel = "stylesheet"),
     tags$style(type = "text/css", "html, body {width:100%;height:100%; font-family: Oswald, sans-serif;}"),
+    includeHTML("meta.html"),
     tags$script('
                 $(document).ready(function () {
                   navigator.geolocation.getCurrentPosition(onSuccess, onError);
