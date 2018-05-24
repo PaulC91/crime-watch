@@ -5,6 +5,8 @@ library(ukpolice)
 library(opencage)
 library(highcharter)
 
+Sys.setenv(OPENCAGE_KEY = readRDS("opencage_api.rds"))
+
 ui <- bootstrapPage(
   
   tags$head(
