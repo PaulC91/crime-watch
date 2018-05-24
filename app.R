@@ -48,7 +48,8 @@ ui <- bootstrapPage(
                 checkboxInput("use_location", "Or use your current location?"),
                 actionButton("go", "Find Crime!", class = "btn-primary"),
                 highchartOutput("selectstat")
-  )
+  ),
+  HTML('<div data-iframe-height></div>')
   )
 
 server <- function(input, output, session) {
