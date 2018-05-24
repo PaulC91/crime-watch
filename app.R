@@ -13,6 +13,8 @@ ui <- bootstrapPage(
     tags$link(href = "https://fonts.googleapis.com/css?family=Oswald", rel = "stylesheet"),
     tags$style(type = "text/css", "html, body {width:100%;height:100%; font-family: Oswald, sans-serif;}"),
     includeHTML("meta.html"),
+    tags$script(src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.16/iframeResizer.contentWindow.min.js",
+                type="text/javascript"),
     tags$script('
                 $(document).ready(function () {
                   navigator.geolocation.getCurrentPosition(onSuccess, onError);
@@ -38,7 +40,7 @@ ui <- bootstrapPage(
   
   absolutePanel(top = 10, right = 10, style = "z-index:500; text-align: right;",
                 tags$h2("Culture of Insight's Crime Watch"),
-                tags$a("About this tool", href="https://github.com/PaulC91/crime-watch")
+                tags$a("About this tool", href="https://cultureofinsight.com/portfolio/crimewatch/")
   ),
   
   absolutePanel(top = 100, left = 10, draggable = TRUE, width = "20%", style = "z-index:500; min-width: 300px;",
