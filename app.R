@@ -35,7 +35,7 @@ ui <- bootstrapPage(
   
   absolutePanel(top = 10, right = 10, style = "text-align: right;",
                 tags$h2("Culture of Insight's Crime Watch"),
-                tags$a("About this tool", href="https://cultureofinsight.com")
+                tags$a("About this tool", href="https://github.com/PaulC91/crime-watch")
   ),
   
   absolutePanel(top = 100, left = 10, draggable = TRUE, width = "20%", style = "min-width: 300px;",
