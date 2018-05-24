@@ -48,8 +48,7 @@ ui <- bootstrapPage(
                 checkboxInput("use_location", "Or use your current location?"),
                 actionButton("go", "Find Crime!", class = "btn-primary"),
                 highchartOutput("selectstat")
-  ),
-  HTML('<div data-iframe-height></div>')
+  )
   )
 
 server <- function(input, output, session) {
@@ -68,11 +67,7 @@ server <- function(input, output, session) {
                    if (input$use_location) {
                      
                      validate(
-                       need(input$geolocation, {
-                         showModal(modalDialog(title = "Sorry!", 
-                                               tags$p("We couldn't find your location"),
-                                               tags$p("Try typing one in instead...")))
-                       })
+                       need(input$geolocation, message = FALSE)
                      )
                      
                      lat <- input$lat
@@ -84,10 +79,7 @@ server <- function(input, output, session) {
                    } else {
                      
                      validate(
-                       need(nchar(input$geocode > 2), {
-                         showModal(modalDialog(title = "Error!", 
-                                               tags$p("Please type a place name first!")))
-                       })
+                       need(nchar(input$geocode > 2), message = FALSE)
                      )
                      
                      geoc <- opencage_forward(placename = input$geocode, countrycode = "GB")

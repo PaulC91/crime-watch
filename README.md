@@ -2,6 +2,8 @@
 
 Visit the app at [apps.cultureofinsight.com/crime-watch/](https://apps.cultureofinsight.com/crime-watch/)
 
+![Crime Watch](https://cultureofinsight.com/img/crime-watch.png)
+
 This application uses geocoding and GPS to allow users to retrieve and map data from the UK Police data base at a location of their choice within England, Wales or Northern Ireland.
 
 Currently the app will return data for the most recent month available in the data base (March 2018 at the time of writing). Functionality could be added to allow users to request data from previous months.
