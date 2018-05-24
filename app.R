@@ -35,12 +35,12 @@ ui <- bootstrapPage(
   
   leafletOutput("map", width = "100%", height = "100%"),
   
-  absolutePanel(top = 10, right = 10, style = "text-align: right;",
+  absolutePanel(top = 10, right = 10, style = "z-index:500; text-align: right;",
                 tags$h2("Culture of Insight's Crime Watch"),
                 tags$a("About this tool", href="https://github.com/PaulC91/crime-watch")
   ),
   
-  absolutePanel(top = 100, left = 10, draggable = TRUE, width = "20%", style = "min-width: 300px;",
+  absolutePanel(top = 100, left = 10, draggable = TRUE, width = "20%", style = "z-index:500; min-width: 300px;",
                 textInput("geocode", "Type an address or location", placeholder = "in England, Wales or NI"),
                 checkboxInput("use_location", "Or use your curret location?"),
                 actionButton("go", "Find Crime!", class = "btn-primary"),
