@@ -1,5 +1,6 @@
 library(shiny)
 library(dplyr)
+library(forcats)
 library(leaflet)
 library(ukpolice)
 library(opencage)
