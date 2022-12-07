@@ -1,6 +1,6 @@
 # Crime Watch
 
-Visit the app at [apps.cultureofinsight.com/crime-watch/](https://apps.cultureofinsight.com/crime-watch/)
+Visit the app at [https://cultureofinsight.shinyapps.io/crime-watch/](https://cultureofinsight.shinyapps.io/crime-watch/)
 
 [<img src="crime-watch.png" rel="Crime Watch" />](https://apps.cultureofinsight.com/crime-watch/)
 
